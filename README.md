@@ -5,3 +5,4 @@
   section, we need to synchronize the threads.
 - By Using lock, wait and notify method, we can very
   easily perform synchronization between two or more threads.
+- ![Thread states](thread-states.png)
