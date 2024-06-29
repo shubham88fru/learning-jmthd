@@ -1,0 +1,15 @@
+Executors api is the preferred way of running tasks:
+- Uses thread pools.
+- Allocates heavy-weight threads upfront.
+- Decouples task submission from thread creation and management.
+- Each thread in the pool executes multiple tasks one-by-one.
+- A tasks-queue holds the tasks.
+- Threads are stopped after completing the pending tasks when
+    the executor service is shutdown (shutdown()).
+- To shut down executor service immediately, use `shutdownNow()`
+
+Some frequently referred classes/interfaces while using executors framework:
+- Executor (Interface)
+- ExecutorService (Interface)
+- Executors (Class)
+- Future (Interface)
