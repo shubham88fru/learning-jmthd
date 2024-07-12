@@ -1,0 +1,4 @@
+- Used when we want some task to continue executing in the background but also exit when the main application exits.
+- Killed by the JVM as soon as no user thread is running any longer. Can be stopped normally too - just like normal threads.
+- "main" thread is a "user" thread - not "daemon".
+- Any kind of logic as desired can be put in daemon threads. E.g. - Directory watcher thread.LoopTaskB
