@@ -2,3 +2,6 @@
 - Killed by the JVM as soon as no user thread is running any longer. Can be stopped normally too - just like normal threads.
 - "main" thread is a "user" thread - not "daemon".
 - Any kind of logic as desired can be put in daemon threads. E.g. - Directory watcher thread.LoopTaskB
+- Although daemon threads can be created using the normal threads API, but can also be created using the Executors API.
+When creating daemon threads using the executors API, we have to implement the ThreadFactory and manipulate the thread
+there to make it 'daemon'.
