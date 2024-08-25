@@ -36,5 +36,15 @@ public class CreatingThreads {
         t1.start();
         t2.start();
         t3.start();
+
+        try {
+            //main thread waits for t1 t2 and t3 to finish before exiting.
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
