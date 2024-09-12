@@ -51,7 +51,6 @@ class Processor {
 
 public class ProducerConsumer {
 
-
     public static void main(String[] args) {
         Processor p = new Processor();
         Thread producer = new Thread(() -> {
