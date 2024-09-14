@@ -14,6 +14,15 @@ public class Locks {
      *          If fairness is FALSE then there is no access order.
      *      IMPORTANT: A good approach is to use try-catch-finally blocks
      *      when doing the critical section and call unlock() in the finally block.
+     *
+     * Pros/Cons of locks:
+     * 1. We can make a lock fair: prevent thread starvation.
+     *    Synchronized blocks are unfair by default.
+     * 2. We can check whether the given lock is held of not with
+     *    reentrant locks.
+     * 3. We can get the list of threads waiting for the given lock
+     *    with reentrant locks.
+     * 4. Synchronized blocks are nicer - we don't need the try-catch-finally block.
      */
     private static int counter = 0;
     private static Lock lock = new ReentrantLock();
