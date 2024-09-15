@@ -32,3 +32,45 @@ Handling deadlock and livelock
 in lock acquisition.
 3. Livelock can be handled with the methods above and some randomness.
     -> threads retry acquiring the locks at random intervals.
+
+------------
+Semaphores
+------------
+1. Invented by Dijsktra in 1962.
+2. Semaphores are simple variables (or abstract data types) that are used for controlling access to a common resource.
+3. It is an important concept in operating systems are well.
+4. Semaphores are a record of how many units of a particular resource are available.
+   We have to ait until a unit of the resource becomes available again.
+5. Counting semaphores: Allows an arbitrary resource count.
+   Binary semaphores: Semaphores that are restricted to the values 0 and 1.
+
+--------------------------------
+Mutex (Mutual exclusion objects)
+--------------------------------
+1. Mutual exclusion is a property of concurrency control which is instituted for the purpose
+    of preventing race conditions.
+2. Process synchronization plays an important role in maintaining the consistency of shared data (critical section problem)
+3. Mutex is very similar to a binary semaphore: While binary semaphore can be used as mutex, a mutex is a
+   more specific use-case.
+4. A lock is designed to enforce a mutual exclusion concurrency control policy.
+
+--------------------
+Semaphores v/s Mutex
+--------------------
+Semaphores:
+    1. It is a signaling mechanism.
+    2. Threads and processes perform wait() and notify() operations to
+       indicate whether they are acquiring or releasing the resource.
+    3. Semaphores allows multiple program threads to access the finite
+       instance of resources (not just a single resource).
+    4. The process or thread blocks itself if not resource is free till
+        the count of semaphore becomes greater than 0.
+
+Mutex:
+    1. Mutex is a locking mechanism.
+    2. Threads or processes have to acquire the lock on mutex object if
+       it wants to acquire the resource.
+    3. Mutex allows multiple program threads to access a single shared resource
+       but one at a time.
+    4. If the lock is already acquired by another thread or process then the thread
+       will wait until the mutex object gets unlocked.
