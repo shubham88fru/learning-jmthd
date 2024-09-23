@@ -81,3 +81,22 @@ Mutex:
     6. If a task tries to unlock a mutex it hasn't locked (thus doesn't own) then
        an error condition is encountered and, most importantly, the mutex is not
        unlocked.
+
+-------------------------------
+Runnable & Callable Interfaces.
+-------------------------------
+Runnable and Callable both run on a different thread (i.e. both are used to create threads) but
+Callable can return a value while Runnable can't.
+
+Runnable: A so-called run-and-forget action. We execute a given operation in the run() method
+without a return value.
+
+Callable<T>: We use Callable interface's call() method if we want to return a given value from the
+given thread.
+-> Callable interface will not return the value: this is why we need Future<T> object.
+-> Calling thread will be blocked till the call() method is executed and Future<T> returns with the
+results.
+
+The ExecutorService can handle both of the interfaces - Runnable and Callable.
+`executor.execute()` executes a runnable interface which means that there is no return value.
+`executor.submit()` can handle runnable and callable interfaces.
