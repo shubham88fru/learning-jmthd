@@ -93,7 +93,7 @@ without a return value.
 
 Callable<T>: We use Callable interface's call() method if we want to return a given value from the
 given thread.
--> Callable interface will not return the value: this is why we need Future<T> object.
+-> Callable interface will not return the value directly: this is why we need Future<T> object.
 -> Calling thread will be blocked till the call() method is executed and Future<T> returns with the
 results.
 
