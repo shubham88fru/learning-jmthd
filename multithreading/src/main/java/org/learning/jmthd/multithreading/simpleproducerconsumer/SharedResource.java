@@ -1,4 +1,4 @@
-package org.learning.jmthd.multithreading.producerconsumer;
+package org.learning.jmthd.multithreading.simpleproducerconsumer;
 
 public class SharedResource {
     private boolean isItemPresent = false;

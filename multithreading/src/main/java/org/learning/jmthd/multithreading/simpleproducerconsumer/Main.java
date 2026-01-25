@@ -1,4 +1,4 @@
-package org.learning.jmthd.multithreading.producerconsumer;
+package org.learning.jmthd.multithreading.simpleproducerconsumer;
 
 public class Main {
     public static void main(String[] args) {
