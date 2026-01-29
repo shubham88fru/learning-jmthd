@@ -40,7 +40,8 @@ public class FizzBuzz {
                     } catch (InterruptedException e) {}
                 }
 
-                System.out.println(Thread.currentThread().getName() + ": " + num);
+//                System.out.println(Thread.currentThread().getName() + ": " + num);
+                System.out.println("Fizz");
                 num++;
                 notifyAll();
 
@@ -57,7 +58,9 @@ public class FizzBuzz {
                     } catch (InterruptedException e) {}
                 }
 
-                System.out.println(Thread.currentThread().getName() + ": " + num);
+//                System.out.println(Thread.currentThread().getName() + ": " + num);
+                System.out.println("Buzz");
+
                 num++;
                 notifyAll();
 
@@ -74,7 +77,9 @@ public class FizzBuzz {
                     } catch (InterruptedException e) {}
                 }
 
-                System.out.println(Thread.currentThread().getName() + ": " + num);
+//                System.out.println(Thread.currentThread().getName() + ": " + num);
+                System.out.println("FizzBuzz");
+
                 num++;
                 notifyAll();
             }
@@ -84,7 +89,7 @@ public class FizzBuzz {
 
 class Test {
     public static void main(String[] args) {
-        FizzBuzz fizzBuzz = new FizzBuzz(15);
+        FizzBuzz fizzBuzz = new FizzBuzz(50);
         Thread t1 = new Thread(fizzBuzz::num);
         t1.setName("Thread-1");
         Thread t2 = new Thread(fizzBuzz::fizz);
