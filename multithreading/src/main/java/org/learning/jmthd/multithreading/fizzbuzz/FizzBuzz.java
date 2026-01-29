@@ -3,6 +3,7 @@ package org.learning.jmthd.multithreading.fizzbuzz;
 /**
  * My soln for fizz buzz problem -
  * https://www.educative.io/courses/java-multithreading-for-senior-engineering-interviews/fizz-buzz-problem
+ *
  * Prints correctly but the program isn't
  * terminating.
  */
