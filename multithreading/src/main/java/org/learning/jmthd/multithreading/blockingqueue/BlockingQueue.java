@@ -15,6 +15,7 @@ public class BlockingQueue<T> {
                 wait();
             } catch (InterruptedException e) {}
         }
+        //consumers wake up, i'm adding an element
         if (queue.isEmpty()) {
             notifyAll();
         }
@@ -27,6 +28,8 @@ public class BlockingQueue<T> {
                 wait();
             } catch (InterruptedException e) {}
         }
+
+        //producers wake up, I'm removing an element.
         if (queue.size() == limit) {
             notifyAll();
         }
