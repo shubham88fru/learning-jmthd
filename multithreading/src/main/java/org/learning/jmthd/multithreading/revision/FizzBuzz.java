@@ -32,6 +32,7 @@ class FizzBuzzPrinter {
                 } catch (InterruptedException e) {}
             }
 
+            if (num > N) return;
 //            System.out.println(Thread.currentThread().getName() + ": Fizz" );
             System.out.println("Fizz");
 
@@ -48,6 +49,7 @@ class FizzBuzzPrinter {
                 } catch (InterruptedException e) {}
             }
 
+            if (num > N) return;
 //            System.out.println(Thread.currentThread().getName() + ": Buzz");
             System.out.println("Buzz");
             num += 1;
@@ -63,6 +65,7 @@ class FizzBuzzPrinter {
                 } catch (InterruptedException e) {}
             }
 
+            if (num > N) return;
 //            System.out.println(Thread.currentThread().getName() + ": FizzBuzz");
             System.out.println("FizzBuzz");
             num += 1;
@@ -78,6 +81,7 @@ class FizzBuzzPrinter {
                 } catch (InterruptedException e) {}
             }
 
+            if (num > N) return;
 //            System.out.println(Thread.currentThread().getName() + ": " + num);
             System.out.println(num);
             num += 1;
