@@ -36,6 +36,7 @@ class FizzBuzzPrinter {
 //            System.out.println(Thread.currentThread().getName() + ": Fizz" );
             System.out.println("Fizz");
 
+
             num += 1;
             notifyAll();
         }
