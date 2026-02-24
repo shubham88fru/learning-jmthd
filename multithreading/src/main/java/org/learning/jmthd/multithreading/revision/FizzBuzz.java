@@ -33,7 +33,7 @@ class FizzBuzzPrinter {
             }
 
             if (num > N) return;
-//            System.out.println(Thread.currentThread().getName() + ": Fizz" );
+            System.out.println(Thread.currentThread().getName() + ": Fizz" );
             System.out.println("Fizz");
 
 
