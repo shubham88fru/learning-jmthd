@@ -51,7 +51,6 @@ class FizzBuzzPrinter {
             }
 
             if (num > N) return;
-//            System.out.println(Thread.currentThread().getName() + ": Buzz");
             System.out.println("Buzz");
             num += 1;
             notifyAll();
